@@ -13,9 +13,16 @@
       <img src="images/pedro.png" alt="Pedro!" />
     </div>
 
-    <audio autoplay loop>
+    <audio autoplay loop muted id="aud" allow="autoplay">
       <source src="audio/pedro.mp3" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
+
+    <script>
+      setTimeout(function () {
+        var audioElement = document.getElementById("aud");
+        audioElement.muted = false;
+      }, 1000);
+    </script>
   </body>
 </html>
